@@ -6,7 +6,9 @@ import reddeman.packages.cards.*;
 public class App {
 
     public static void main(String[] args) {
-        Card card = new Card(14, "Clubs");
+        System.out.println(Card.CardValue.THREE);
+        Card card = new Card(Card.CardValue.THREE, Card.Suit.CLUBS);
         System.out.println(card);
+
     }
 }
