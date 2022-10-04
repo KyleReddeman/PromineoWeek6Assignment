@@ -2,6 +2,7 @@
 package reddeman.packages.application;
 
 import reddeman.packages.cards.*;
+import reddeman.packages.user.*;
 import java.util.*;
 
 public class App {
@@ -11,9 +12,8 @@ public class App {
         Deck deck = new Deck();
         System.out.println(deck);
         deck.shuffle();
-        System.out.println(deck);
-        System.out.println(deck.draw());
-        System.out.println("");
-        System.out.println(deck);
+        Player player1 = new Player("Kyle");
+        player1.describe();
+
     }
 }
