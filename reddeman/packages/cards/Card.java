@@ -5,45 +5,61 @@ package reddeman.packages.cards;
 public class Card {
 
     public static enum Suit {
-        CLUBS, SPADES, DIAMONDS, HEARTS;
-    }
+        CLUBS("Clubs"), SPADES("Spades"), DIAMONDS("Diamonds"), HEARTS("Hearts");
 
-    public static enum CardValue {
-        TWO(2), THREE(3), FOUR(4), FIVE(5), SIX(6), SEVEN(7), EIGHT(8), NINE(9), TEN(10), JACK(11), QUEEN(12), KING(13), ACE(14);
-        private final int value;
-        CardValue(int value) {
-            this.value = value;
+        private final String name;
+        Suit(String name) {
+            this.name = name;
+        }
+        public String getName() {
+            return this.name;
         }
     }
 
-    private String name;
+    public static enum CardValue {
+        TWO(2, "Two"), THREE(3, "Three"), FOUR(4, "Four"), FIVE(5, "Five"), 
+        SIX(6, "Six"), SEVEN(7, "Seven"), EIGHT(8, "Eight"), NINE(9, "Nine"), TEN(10, "Ten"), 
+        JACK(11, "Jack"), QUEEN(12, "Queen"), KING(13, "King"), ACE(14, "Ace");
+
+        private final int value;
+        private final String name;
+        CardValue(int value, String name) {
+            this.value = value;
+            this.name = name;
+        }
+        public int getValue() {
+            return this.value;
+        }
+        public String getName() {
+            return this.name;
+        }
+    }
+
+
     private CardValue cardValue;
     private Suit suit;
+    private String cardDescription;
 
 
     public Card(CardValue cardValue, Suit suit) {
-        System.out.println(Suit.SPADES);
-        System.out.println(CardValue.TWO);
         this.cardValue = cardValue;
         this.suit = suit;
-        this.name = calculateName();
+        this.cardDescription = calculateDescription();
     }
 
     public int getValue() {
-        return value;
+        return this.cardValue.getValue();
     }
 
-    public String getName() {
-        return name;
+    public String describe() {
+        return cardDescription;
     }
 
     public String toString() {
-        return name;
+        return cardDescription;
     }
     
-    private String calculateName() {
-            String valueName = cardValue.toString().substring(0, 1) + cardValue.toString().substring(1, cardValue.toString().length()).toLowerCase();
-            String suitName = suit.toString().substring(0, 1) + suit.toString().substring(1, suit.toString().length()).toLowerCase();
-            return valueName + " of " + suitName;
+    private String calculateDescription() {
+            return cardValue.getName() + " of " + suit.getName();
     }
 }
