@@ -10,10 +10,13 @@ public class App {
     public static void main(String[] args) {
 
         Deck deck = new Deck();
-        System.out.println(deck);
         deck.shuffle();
+        System.out.println(deck);
         Player player1 = new Player("Kyle");
         player1.describe();
+        player1.draw(deck);
+        player1.describe();
+        System.out.println(deck);
 
     }
 }

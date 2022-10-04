@@ -2,9 +2,11 @@ package reddeman.packages.cards;
 
 import java.util.*;
 
+//class used to represent a standard deck of playing cards.
 public class Deck {
     List<Card> cards;
 
+    //populates the deck with all 52 distinct cards
     public Deck () {
         cards = new LinkedList<>();
         for(Card.Suit suit : Card.Suit.values()) {
@@ -24,6 +26,7 @@ public class Deck {
         return cards.remove(0);
     }
 
+    //returns a string representation of all the cards currently in the deck
     public String toString() {
         String description = "";
         for(Card card : cards) {

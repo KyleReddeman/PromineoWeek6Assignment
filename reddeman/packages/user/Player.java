@@ -3,6 +3,7 @@ package reddeman.packages.user;
 import reddeman.packages.cards.*;
 import java.util.*;
 
+//represents a player of the game War.
 public class Player {
     private List<Card> hand;
     private int score;
@@ -18,6 +19,8 @@ public class Player {
         return this.score;
     }
 
+    //prints the players name and score, as well as
+    //all of the cards in the players hand.
     public void describe() {
         System.out.println(this.name + " - Score: " + this.score);
         System.out.println("Cards: ");
@@ -26,14 +29,17 @@ public class Player {
         }
     }
 
+    //removes and returns a card from the top of the players hand.
     public Card flip() {
         return this.hand.remove(0);
     }
 
+    //draws one card from a deck, and adds it to the top of your hand.
     public void draw(Deck deck) {
         this.hand.add(0, deck.draw());
     }
 
+    //adds to your score
     public void incrementScore() {
         this.score++;
     }
