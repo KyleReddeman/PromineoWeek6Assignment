@@ -2,12 +2,18 @@
 package reddeman.packages.application;
 
 import reddeman.packages.cards.*;
+import java.util.*;
 
 public class App {
 
     public static void main(String[] args) {
-        Card card = new Card(Card.CardValue.KING, Card.Suit.CLUBS);
-        System.out.println(card.getValue());
-        System.out.println(card);
+
+        Deck deck = new Deck();
+        System.out.println(deck);
+        deck.shuffle();
+        System.out.println(deck);
+        System.out.println(deck.draw());
+        System.out.println("");
+        System.out.println(deck);
     }
 }
