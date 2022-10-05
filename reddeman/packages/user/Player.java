@@ -19,6 +19,10 @@ public class Player {
         return this.score;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
     //prints the players name and score, as well as
     //all of the cards in the players hand.
     public void describe() {
