@@ -1,8 +1,8 @@
-package packages.user;
+package src.packages.user;
 
 import java.util.*;
 
-import packages.cards.*;
+import src.packages.cards.*;
 
 //represents a player of the game War.
 public class Player {
@@ -27,15 +27,15 @@ public class Player {
     //prints the players name and score, as well as
     //all of the cards in the players hand.
     public void describe() {
-        System.out.println(this.name + " - Score: " + this.score);
-        System.out.println("Cards: ");
-        for(Card card : this.hand) {
-            System.out.println(card);
-        }
+        System.out.println(toString());
     }
 
     //removes and returns a card from the top of the players hand.
+    //returns null if the hand is empty
     public Card flip() {
+        if(hand.isEmpty()) {
+            return null;
+        }
         return this.hand.remove(0);
     }
 
@@ -47,5 +47,14 @@ public class Player {
     //adds to your score
     public void incrementScore() {
         this.score++;
+    }
+
+    public String toString() {
+        String description = this.name + " - Score: " + this.score;
+        description += "\nCards: \n";
+        for(Card card : this.hand) {
+            description += card.toString() + "\n";
+        }
+        return description.trim();
     }
 }

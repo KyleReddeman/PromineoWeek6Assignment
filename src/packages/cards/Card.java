@@ -1,4 +1,4 @@
-package packages.cards;
+package src.packages.cards;
 
 
 //class that is used to represent a playing card

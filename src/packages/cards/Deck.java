@@ -1,10 +1,10 @@
-package packages.cards;
+package src.packages.cards;
 
 import java.util.*;
 
 //class used to represent a standard deck of playing cards.
 public class Deck {
-    List<Card> cards;
+    private List<Card> cards;
 
     //populates the deck with all 52 distinct cards
     public Deck () {
@@ -35,6 +35,6 @@ public class Deck {
         for(Card card : cards) {
             description += card + "\n";
         }
-        return description;
+        return description.trim();
     }
 }

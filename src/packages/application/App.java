@@ -1,8 +1,8 @@
 
-package packages.application;
+package src.packages.application;
 
-import packages.cards.*;
-import packages.user.*;
+import src.packages.cards.*;
+import src.packages.user.*;
 
 public class App {
 
