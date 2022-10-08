@@ -1,4 +1,4 @@
-package reddeman.packages.cards;
+package packages.cards;
 
 
 //class that is used to represent a playing card

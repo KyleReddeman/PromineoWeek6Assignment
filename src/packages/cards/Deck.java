@@ -1,4 +1,4 @@
-package reddeman.packages.cards;
+package packages.cards;
 
 import java.util.*;
 
@@ -21,8 +21,11 @@ public class Deck {
     }
 
     //removes and returns top card.
-    //can't call on empty deck.
+    //returns null if called on empty deck.
     public Card draw() {
+        if(cards.isEmpty()) {
+            return null;
+        }
         return cards.remove(0);
     }
 

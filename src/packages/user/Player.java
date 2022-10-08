@@ -1,7 +1,8 @@
-package reddeman.packages.user;
+package packages.user;
 
-import reddeman.packages.cards.*;
 import java.util.*;
+
+import packages.cards.*;
 
 //represents a player of the game War.
 public class Player {

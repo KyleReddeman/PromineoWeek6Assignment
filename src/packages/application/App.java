@@ -1,9 +1,8 @@
 
-package reddeman.packages.application;
+package packages.application;
 
-import reddeman.packages.cards.*;
-import reddeman.packages.user.*;
-import java.util.*;
+import packages.cards.*;
+import packages.user.*;
 
 public class App {
 
