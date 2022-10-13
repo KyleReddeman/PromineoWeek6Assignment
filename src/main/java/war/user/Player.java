@@ -1,8 +1,8 @@
-package src.packages.user;
+package war.user;
 
 import java.util.*;
 
-import src.packages.cards.*;
+import war.cards.*;
 
 //represents a player of the game War.
 public class Player {

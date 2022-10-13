@@ -1,4 +1,4 @@
-package src.packages.cards;
+package war.cards;
 
 import java.util.*;
 

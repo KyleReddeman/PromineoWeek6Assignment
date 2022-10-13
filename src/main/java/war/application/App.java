@@ -1,8 +1,8 @@
 
-package src.packages.application;
+package war.application;
 
-import src.packages.cards.*;
-import src.packages.user.*;
+import war.cards.*;
+import war.user.*;
 
 public class App {
 

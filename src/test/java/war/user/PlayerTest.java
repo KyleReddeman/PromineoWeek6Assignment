@@ -1,8 +1,7 @@
-package src.tests.user;
+package war.user;
 
 import org.junit.*;
-import src.packages.user.*;
-import src.packages.cards.*;
+import war.cards.*;
 
 public class PlayerTest {
     private Player player;

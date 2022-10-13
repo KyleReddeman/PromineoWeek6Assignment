@@ -1,7 +1,6 @@
-package src.tests.cards;
+package war.cards;
 
 import org.junit.*;
-import src.packages.cards.*;
 
 public class DeckTest {
     private Deck deck;
